@@ -1,0 +1,83 @@
+services:
+
+##########################################
+##
+## kanban-flow / bootstrap front end
+##
+##########################################
+
+    kanban-flow-web:
+
+        container_name: kanban-flow-web
+
+        image: softwareshinobi/kanban-flow-web:intranet
+
+        build: 
+
+            context: web
+
+            dockerfile: Dockerfile
+
+        restart: unless-stopped
+
+        ports:
+
+            - "10.28.1.1:8880:80"
+
+##########################################
+##
+## kanban-flow / spring rest back end
+##
+##########################################
+
+    kanban-flow-api:
+
+        container_name: kanban-flow-api
+        
+        image: softwareshinobi/kanban-flow-api:intranet
+
+        build: 
+
+            context: .
+
+            dockerfile: Dockerfile
+
+        restart: unless-stopped
+
+        ports:
+
+            - "10.28.1.1:8888:8888"
+
+        environment:
+
+            DB_HOST: 10.28.1.1
+
+            DB_NAME: huracan
+
+            DB_USER: huracan
+
+            DB_PASS: huracan
+
+##########################################
+##
+## kanban-flow / documentation
+##
+##########################################
+
+    kanban-flow-docs:
+
+        container_name: kanban-flow-docs
+
+        image: softwareshinobi/kanban-flow-docs:intranet
+
+        build: 
+
+            context: docs
+
+            dockerfile: Dockerfile
+
+        restart: unless-stopped
+
+        ports:
+
+            - "10.28.1.1:8889:80"

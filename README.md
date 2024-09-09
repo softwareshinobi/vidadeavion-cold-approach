@@ -1,1 +1,0 @@
-# vidadeavion-cold-approach
