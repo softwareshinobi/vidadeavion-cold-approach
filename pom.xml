@@ -18,13 +18,13 @@
     
     <groupId>digital.softwareshinobi</groupId>
     
-    <artifactId>kanban-flow-dashboard-reporting</artifactId>
+    <artifactId>vidadeavion-cold-approach</artifactId>
     
     <version>1.0</version>
     
-    <name>kanban-flow-dashboard-reporting</name>
+    <name>vidadeavion-cold-approach</name>
     
-    <description>kanban-flow-dashboard-reporting</description>
+    <description>vidadeavion-cold-approach</description>
 
     <properties>        
         <java.version>17</java.version>        

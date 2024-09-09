@@ -1,4 +1,4 @@
-package digital.valorantsoftware.workspace.story;
+package online.vidadeavion.coldapproach.coldapproach;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,26 +14,26 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin
 @RestController
-@RequestMapping("story")
-public class UserStoryController {
+@RequestMapping("coldapproach")
+public class ColdApproachController {
 
     @Autowired
-    UserStoryService userStoryService;
+    ColdApproachService coldApproachService;
 
-    public UserStoryController() {
+    public ColdApproachController() {
 
         System.out.println("## ");
-        System.out.println("## init > User Story API");
+        System.out.println("## init > Cold Approach API");
         System.out.println("## ");
 
     }
 
     @GetMapping("")
-    public List<UserStory> findAll() {
+    public List<ColdApproach> findAll() {
 
         System.out.println("enter > findAll");
 
-        List<UserStory> userStoryList = this.userStoryService.findAll();
+        List<ColdApproach> userStoryList = this.coldApproachService.findAll();
 
         System.out.println("userStoryList / ");
 
@@ -46,51 +46,44 @@ public class UserStoryController {
     }
 
     @PutMapping("")
-    UserStory createUserStory(@RequestBody UserStory userStory) {
+    ColdApproach createColdApproach(@RequestBody ColdApproach userStory) {
 
-        System.out.println("enter > createUserStory");
+        System.out.println("enter > createColdApproach");
 
         System.out.println("userStory / " + userStory);
 
-        return this.userStoryService.save(userStory);
+        return this.coldApproachService.save(userStory);
 
     }
 
     @GetMapping("{id}")
-    UserStory findById(@PathVariable Long id) {
+    ColdApproach findById(@PathVariable Long id) {
 
-        return this.userStoryService.findById(id);
-
-    }
-
-    @GetMapping("status/{status}")
-    List<UserStory> findByStatus(@PathVariable String status) {
-
-        return this.userStoryService.findByStatus(status);
+        return this.coldApproachService.findById(id);
 
     }
 
     @PostMapping("update")
-    public UserStory updateUserStory(@RequestBody UserStory project) {
+    public ColdApproach updateColdApproach(@RequestBody ColdApproach project) {
 
-        System.out.println("enter > updateUserStory");
+        System.out.println("enter > updateColdApproach");
 
         System.out.println("userStory / " + project);
 
-        UserStory responseUserStory = this.userStoryService.save(project);
+        ColdApproach responseColdApproach = this.coldApproachService.save(project);
 
-        System.out.println("responseUserStory / " + responseUserStory);
+        System.out.println("responseColdApproach / " + responseColdApproach);
 
-        System.out.println("exit < updateUserStory");
+        System.out.println("exit < updateColdApproach");
 
-        return responseUserStory;
+        return responseColdApproach;
 
     }
 
     @DeleteMapping("{id}")
     public void deleteById(@PathVariable Long id) {
 
-        this.userStoryService.delete(id);
+        this.coldApproachService.delete(id);
 
     }
 

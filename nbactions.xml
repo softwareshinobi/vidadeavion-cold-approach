@@ -10,10 +10,10 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:3.1.0:exec</goal>
             </goals>
             <properties>
-                <exec.vmArgs>-DDB_HOST=intranet.embanet.softwareshinobi.digital -DDB_PORT=3306 -DDB_NAME=huracan -DDB_USER=huracan -DDB_PASS=huracan</exec.vmArgs>
+                <exec.vmArgs>-DDB_HOST=intranet.embanet.softwareshinobi.digital -DDB_PORT=3306 -DDB_NAME=aventador -DDB_USER=aventador -DDB_PASS=aventador</exec.vmArgs>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.appArgs></exec.appArgs>
-                <exec.mainClass>digital.valorantsoftware.workspace.ValorantDigitalWorkspace</exec.mainClass>
+                <exec.mainClass>online.vidadeavion.coldapproach.ColdApproachAPI</exec.mainClass>
                 <exec.executable>java</exec.executable>
             </properties>
         </action>
@@ -27,10 +27,10 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:3.1.0:exec</goal>
             </goals>
             <properties>
-                <exec.vmArgs>-DDB_HOST=intranet.embanet.softwareshinobi.digital -DDB_PORT=3306 -DDB_NAME=huracan -DDB_USER=huracan -DDB_PASS=huracan -agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
+                <exec.vmArgs>-DDB_HOST=intranet.embanet.softwareshinobi.digital -DDB_PORT=3306 -DDB_NAME=aventador -DDB_USER=aventador -DDB_PASS=aventador -agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.appArgs></exec.appArgs>
-                <exec.mainClass>digital.valorantsoftware.workspace.ValorantDigitalWorkspace</exec.mainClass>
+                <exec.mainClass>online.vidadeavion.coldapproach.ColdApproachAPI</exec.mainClass>
                 <exec.executable>java</exec.executable>
                 <jpda.listen>true</jpda.listen>
             </properties>
@@ -45,9 +45,9 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:3.1.0:exec</goal>
             </goals>
             <properties>
-                <exec.vmArgs>-DDB_HOST=intranet.embanet.softwareshinobi.digital -DDB_PORT=3306 -DDB_NAME=huracan -DDB_USER=huracan -DDB_PASS=huracan</exec.vmArgs>
+                <exec.vmArgs>-DDB_HOST=intranet.embanet.softwareshinobi.digital -DDB_PORT=3306 -DDB_NAME=aventador -DDB_USER=aventador -DDB_PASS=aventador</exec.vmArgs>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
-                <exec.mainClass>digital.valorantsoftware.workspace.ValorantDigitalWorkspace</exec.mainClass>
+                <exec.mainClass>online.vidadeavion.coldapproach.ColdApproachAPI</exec.mainClass>
                 <exec.executable>java</exec.executable>
                 <exec.appArgs></exec.appArgs>
             </properties>
